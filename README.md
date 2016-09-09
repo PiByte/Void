@@ -1,12 +1,13 @@
-# Void
-Space game written in C++
-<hr/>
+Void
+--------
+
+
+----------
+
+
+A space exploration game written in C++
 <br/>
-```
- _    __      _     __
-| |  / /___  (_)___/ /
-| | / / __ \/ / __  / 
-| |/ / /_/ / / /_/ /  
-|___/\____/_/\__,_/   
-                     
-```
+
+**Building void**<br/>
+1. Install MinGW at the default install location and run 'build.bat'<br/>
+2. Run 'void.exe'
