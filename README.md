@@ -2,7 +2,6 @@ Void
 --------
 
 
-----------
 
 
 A space exploration game written in C++
