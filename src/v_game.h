@@ -2,7 +2,7 @@ class v_game
 {
 public:
 	void mainScreen();
-// asdf
+	// I think i'm starting to get this!
 	// Comment
 
 };
