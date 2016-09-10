@@ -3,12 +3,15 @@
 #include "v_game.h"
 // More imports
 
+using std::cout;
+using std::endl;
+
 void v_game::mainScreen()
 {
-  print("Hello");
+  cout << "Hello" << endl;
 }
 
-void v_game::print(char txt[])
+void v_game::clearScreen()
 {
-  std::cout << txt << std::endl;
+  cout << std::string(50, '\n');
 }

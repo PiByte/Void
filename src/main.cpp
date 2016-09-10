@@ -21,6 +21,7 @@ int main()
 			game.mainScreen();
 		break;
 		case 2:
+			return 1;
 		break;
 	}
 }
