@@ -9,7 +9,6 @@ int main()
 	v_game 			game;
 
 	game.clearScreen();
-
 	game.mainMenu();
 
 	while (!game.isRunning)
