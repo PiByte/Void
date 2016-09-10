@@ -4,5 +4,5 @@ public:
   int newPlanet();
   int getPlanet();
 private:
-  int currentPlanet;
+  int currentPlanet = 5165;
 };

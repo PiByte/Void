@@ -4,6 +4,7 @@ public:
 	void mainMenu();
 	void mainGame();
 
+	void mainShip();
 
 	void clearScreen();
 

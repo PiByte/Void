@@ -3,6 +3,7 @@
 #include "v_game.h"
 #include "v_input.h"
 #include "v_planet.h"
+#include "v_ship.h"
 
 // Currency: UCS (Universal Currency System)
 
@@ -13,6 +14,7 @@
 
 v_input     input;
 v_planet    planet;
+v_ship      ship;
 
 /*
 v_io        io;
@@ -47,14 +49,11 @@ void v_game::mainGame()
   switch (input.key())
   {
     case 1:
-      v_game::clearScreen();
-      planet.newPlanet();
-      cout << planet.getPlanet() << endl;
 
-      v_game::mainGame();
     break;
     case 2:
-      // Ship
+      v_game::clearScreen();
+      v_game::mainShip();
     break;
     case 3:
       // Shop
@@ -63,6 +62,37 @@ void v_game::mainGame()
       // Save crap to disk
     break;
     // Add default
+  }
+}
+
+void v_game::mainShip()
+{
+  cout << "Ship Menu\n\nEngine: ";
+  ship.getEngine();
+
+  cout << "Weapons: ";
+  ship.getWeapons();
+
+  cout << "Storage: ";
+  ship.getStorage();
+
+  cout << "Cabin: ";
+  ship.getCabin();
+
+  cout << "\nCurrent planet: #" << planet.getPlanet() << endl;
+
+  cout << "\n1. Back\n" << endl;
+
+  switch (input.key())
+  {
+    case 1:
+      v_game::clearScreen();
+      v_game::mainGame();
+    break;
+    default:
+      v_game::clearScreen();
+      v_game::mainShip();
+    break;
   }
 }
 
