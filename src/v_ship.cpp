@@ -1,7 +1,25 @@
 #include <iostream>
 #include "v_ship.h"
+#include "v_input.h"
+#include "v_game.h"
+#include "v_planet.h"
+
+v_input			input;
+v_game			game;
+v_planet		planet;
 
 using namespace std;
+
+v_ship::v_ship()
+{
+	v_ship::engine = 2;
+	v_ship::weapons = 2;
+	v_ship::storage = 2;
+	v_ship::cabin = 2;
+	
+	v_ship::health = 100;
+	v_ship::cash = 0;
+}
 
 void v_ship::getEngine()
 {
@@ -42,7 +60,7 @@ void v_ship::getWeapons()
       cout << "SpaceLoop Extreme" << endl;
     break;
   }
-}
+} 
 
 void v_ship::getStorage()
 {
@@ -81,6 +99,41 @@ void v_ship::getCabin()
     break;
     case 4:
        cout << "Daminium Premium Suite" << endl;
+    break;
+  }
+}
+
+void v_ship::shipScreen()
+{
+	cout << "Ship Menu\n\nEngine: ";
+  v_ship::getEngine();
+
+  cout << "Weapons: ";
+  v_ship::getWeapons();
+
+  cout << "Storage: ";
+  v_ship::getStorage();
+
+  cout << "Cabin: ";
+  v_ship::getCabin();
+  
+  cout << "\nHealth: " << v_ship::health << endl;
+  
+  cout << "Cash: " << v_ship::cash << endl;
+
+  cout << "\nCurrent planet: #" << planet.getPlanet() << endl;
+
+  cout << "\n1. Back\n" << endl;
+
+  switch (input.key())
+  {
+    case 1:
+      game.clearScreen();
+      game.mainGame();
+    break;
+    default:
+      game.clearScreen();
+      v_ship::shipScreen();
     break;
   }
 }

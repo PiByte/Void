@@ -1,1 +1,1 @@
-C:\MinGW\bin\g++ src\*.cpp -o void.exe
+C:\MinGW\bin\g++.exe -static-libstdc++ src\*.cpp -o void.exe

@@ -24,6 +24,10 @@ v_shop      shop;
 using std::cout;
 using std::endl;
 
+v_game::v_game()
+{
+	v_game::isRunning = true;
+}
 
 void v_game::mainMenu()
 {
@@ -52,8 +56,7 @@ void v_game::mainGame()
 
     break;
     case 2:
-      v_game::clearScreen();
-      v_game::mainShip();
+		ship.shipScreen();
     break;
     case 3:
       // Shop
@@ -65,36 +68,6 @@ void v_game::mainGame()
   }
 }
 
-void v_game::mainShip()
-{
-  cout << "Ship Menu\n\nEngine: ";
-  ship.getEngine();
-
-  cout << "Weapons: ";
-  ship.getWeapons();
-
-  cout << "Storage: ";
-  ship.getStorage();
-
-  cout << "Cabin: ";
-  ship.getCabin();
-
-  cout << "\nCurrent planet: #" << planet.getPlanet() << endl;
-
-  cout << "\n1. Back\n" << endl;
-
-  switch (input.key())
-  {
-    case 1:
-      v_game::clearScreen();
-      v_game::mainGame();
-    break;
-    default:
-      v_game::clearScreen();
-      v_game::mainShip();
-    break;
-  }
-}
 
 // Misc functions
 

@@ -8,5 +8,7 @@ public:
 
 	void clearScreen();
 
-	bool isRunning = true;
+	bool isRunning;
+	
+	v_game();
 };

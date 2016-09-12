@@ -1,5 +1,11 @@
 #include <iostream>
+#include <stdlib.h>
 #include "v_planet.h"
+
+v_planet::v_planet()
+{
+	v_planet::currentPlanet = 5165;
+}
 
 int v_planet::newPlanet()
 {
