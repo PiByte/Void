@@ -7,19 +7,12 @@
 
 // Currency: UCS (Universal Currency System)
 
-/*
-#include "io.h"
-#include "shop.h"
-*/
 
-v_input     input;
-v_planet    planet;
+extern v_input     input;
+extern v_planet    planet;
+extern v_ship      ship;
+
 v_ship      ship;
-
-/*
-v_io        io;
-v_shop      shop;
-*/
 
 using std::cout;
 using std::endl;
@@ -56,6 +49,7 @@ void v_game::mainGame()
 
     break;
     case 2:
+		v_game::clearScreen();
 		ship.shipScreen();
     break;
     case 3:
